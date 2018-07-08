@@ -2,6 +2,7 @@
 @import url("page.css");
 @import url("introduce.css");
 @import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url(https://cdn.rawgit.com/kattergil/NotoSerifKR-Web/76eb9ebf/stylesheet/NotoSerif-Web.css);
 
 @font-face {
     font-family: 'Noto Sans KR';
@@ -67,4 +68,21 @@ html, body {
 
     /* Support for IE. */
     font-feature-settings: 'liga';
+}
+
+.Neurbutton {
+    width: 150px;
+    height: 50px;
+    font-size:18px;
+    font-family: 'Noto Sans KR Bold';
+    border: 2px solid #000;
+    color: #000;
+    text-align: center;
+    line-height: 50px;
+    transition: 0.2s;
+}
+
+.Neurbutton:hover {
+    background-color: #000;
+    color: #fff;
 }
