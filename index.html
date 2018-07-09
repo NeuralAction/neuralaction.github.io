@@ -47,6 +47,9 @@
                     <div class="developers"><a href="https://github.com/gmlwns2000">Developed by Heejun Lee</a>, <a href="https://github.com/hjh010501">Jonghyeon Ham</a></div>
                     <div class="awards">Award in 2018 Intel ISEF Fourth Award in Robotics And Intelligent Machines</div>
                 </div>
+                <div class="rightside">
+                    <div id="introanimation"></div>
+                </div>
             </div>
         </div>
         <div class="page Tech">
@@ -74,6 +77,16 @@
             </div>
         </div>
         <script async defer src="https://buttons.github.io/buttons.js"></script>
+        <script src="🖌/animation/lottie.js" type="text/javascript"></script>
+        <script>
+        lottie.loadAnimation({
+  container: document.getElementById('introanimation'), // the dom element that will contain the animation
+  renderer: 'svg',
+  loop: true,
+  autoplay: true,
+    path: '🖌/animation/test.json' // the path to the animation json
+});
+        </script>
     </body>
 </html>
 
