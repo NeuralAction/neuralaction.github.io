@@ -3,6 +3,7 @@
 .leftside {
     width: 60%;
     padding-top: 100px;
+    float:left;
 }
 
 .title {
@@ -32,4 +33,20 @@
     font-size:16px;
     font-family: 'Noto Serif KR';
     color: #bbb;
+}
+
+.rightside {
+    width: 40%;
+    float:right;
+}
+
+#introanimation {
+    float:left;
+}
+
+#introanimation > svg {
+    width: 800px !important;
+    transform: translate3d(0px, 0px, 0px);
+    margin-left: -220px !important;
+    margin-top: -180px !important;
 }
