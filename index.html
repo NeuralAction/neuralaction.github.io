@@ -27,8 +27,7 @@
                 <div class="logo"></div>
                 <div class="nav_menu">
                     <a href="#introduce">Introduce</a>
-                    <a href="#tech">Tech</a>
-                    <a href="#papers">Papers</a>
+                    <a href="#features">Features</a>
                     <a href="#download">Download</a>
             </div>
             </div>
@@ -54,24 +53,24 @@
                 </div>
             </div>
         </div>
-        <div class="page Tech">
+        <div class="page Features">
             <div class="page_contents">
                     <div class="title">Tech</div>
                     <br>
-                    <div class="subtitle"></div>
+                    <div class="subtitle"><span style="font-family: 'Noto Sans KR Bold';">Look at our demo video 📹</span></div>
                     <br>
-                    <br>
+                    <div style="width: 100%;" id="neuralaction_player"></div>
+            </div>
+            <div class="tensorflow_contents">
+                <div class="page_contents">
+                        <div class="title">Tensorflow</div>
+                        <br>
+                        <div class="subtitle"><span style="font-family: 'Noto Sans KR Bold';">Tensorflow, OpenFace, Xamarin</span> are great development method</div>
+                        <br>
+                </div>
             </div>
         </div>
-        <div class="page Papers">
-            <div class="page_contents">
-                <div class="title">Papers</div>
-                <br>
-                <div class="subtitle"></div>
-                <br>
-                <br>
-            </div>
-        </div>
+        
         <div class="page Download">
             <div class="page_contents">
                 <div class="title">Download</div>
@@ -106,6 +105,48 @@
             path: 'https://raw.githubusercontent.com/NeuralAction/neuralaction.github.io/master/%F0%9F%96%8C/animation/test.json' // the path to the animation json
         });
         </script>
+            <script>
+                // 2. This code loads the IFrame Player API code asynchronously.
+                var tag = document.createElement('script');
+          
+                tag.src = "https://www.youtube.com/iframe_api";
+                var firstScriptTag = document.getElementsByTagName('script')[0];
+                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+          
+                // 3. This function creates an <iframe> (and YouTube player)
+                //    after the API code downloads.
+                var player;
+                function onYouTubeIframeAPIReady() {
+                  player = new YT.Player('neuralaction_player', {
+                    height: '562',
+                    width: '1000',
+                    videoId: 'J42NxjT1wus',
+                    events: {
+                      'onReady': onPlayerReady,
+                      'onStateChange': onPlayerStateChange
+                    }
+                  });
+                }
+          
+                // 4. The API will call this function when the video player is ready.
+                function onPlayerReady(event) {
+                  event.target.playVideo();
+                }
+          
+                // 5. The API calls this function when the player's state changes.
+                //    The function indicates that when playing a video (state=1),
+                //    the player should play for six seconds and then stop.
+                var done = false;
+                function onPlayerStateChange(event) {
+                  if (event.data == YT.PlayerState.PLAYING && !done) {
+                    setTimeout(stopVideo, 6000);
+                    done = true;
+                  }
+                }
+                function stopVideo() {
+                  player.stopVideo();
+                }
+              </script>
     </body>
 </html>
 
