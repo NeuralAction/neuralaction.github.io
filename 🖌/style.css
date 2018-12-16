@@ -131,6 +131,10 @@ html, body {
         width: 90px;
     }
 
+    .footbar {
+        height: 425px;
+    }
+
     #introanimation > svg {
         margin-left: -170px !important;
     }
@@ -144,8 +148,17 @@ html, body {
 
 @media screen and (max-width: 550px) {
 
+
+    .footbar {
+        height: fit-content;
+    }
+
     .title {
         font-size: 52px;
+    }
+
+    .footbar {
+        height: 500px;
     }
 
     .subtitle {
@@ -174,6 +187,14 @@ html, body {
 
     #introanimation > svg {
         width: 600px !important;
+    }
+
+    .featurestitle {
+        font-size: 24px;
+    }
+    
+    .featurescontent {
+        font-size: 18px;
     }
 }
 
