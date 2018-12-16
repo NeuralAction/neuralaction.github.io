@@ -26,11 +26,14 @@
 
 .downloadtable {
     width: 100%;
-    
-    border: 0 solid #fff;
     font-size:24px;
     font-family: 'Noto Sans KR Light';
+    border: 0;
+    -webkit-box-shadow: 0px 15px 75px 3px rgba(0,0,0,0.05);
+    -moz-box-shadow: 0px 15px 75px 3px rgba(0,0,0,0.05);
+    box-shadow: 0px 15px 75px 3px rgba(0,0,0,0.05);
 }
+
 
 caption {
     margin-bottom: 25px;
@@ -39,21 +42,47 @@ caption {
 }
 
 td {
-    background-color: #eee;
+    font-size: 18px;
     height: 60px;
     line-height: 60px;
     text-align: center;
+    border: 0;
 }
 
 th {
+    font-size: 22px;
     height: 60px;
     line-height: 60px;
-    background-color: #000;
-    color: #fff;
     font-family: 'Noto Sans KR Bold';
 }
 
 .table_description {
     text-align: left;
     padding-left: 20px;
+}
+
+@media screen and (max-width: 850px) { 
+    th {
+        padding: 5px;
+    }
+    th {
+        font-size: 18px;
+    }
+
+    td {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+
+@media screen and (max-width: 550px) { 
+    th {
+        font-size: 14px;
+    }
+
+    td {
+        font-size: 14px;
+        line-height: 20px;
+    }
 }
