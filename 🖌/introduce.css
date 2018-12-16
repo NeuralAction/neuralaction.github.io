@@ -38,10 +38,12 @@
 .rightside {
     width: 40%;
     float:right;
+    pointer-events: none;
 }
 
 #introanimation {
     float:left;
+    pointer-events: none;
 }
 
 #introanimation > svg {
@@ -49,4 +51,5 @@
     transform: translate3d(0px, 0px, 0px);
     margin-left: -220px !important;
     margin-top: -180px !important;
+    pointer-events: none;
 }
