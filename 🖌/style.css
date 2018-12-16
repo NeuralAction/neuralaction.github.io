@@ -36,13 +36,14 @@
 a {
     text-decoration:none;
     color: inherit;
+    cursor: hand;
 }
 
 html, body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-
+    scroll-behavior: smooth;
 }
 
 .material-icons {
@@ -88,3 +89,110 @@ html, body {
     background-color: #000;
     color: #fff;
 }
+
+@media screen and (max-width: 1000px) {
+    .page_contents, .nav_contents, .footbar_contents {
+        width: 800px;
+    }
+
+    .logo {
+        width: 120px;
+    }
+
+    .nav_menu > a {
+        margin-right: 17.5px;
+        font-size: 18px;
+    }
+
+    .leftside {
+        width: 100%;
+    }
+
+    .rightside {
+        float:left;
+        width: 100%;
+    }
+
+    #introanimation > svg {
+        margin-left: -10px !important;
+    }
+
+    #neuralaction_player {
+        height: 450px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .page_contents, .nav_contents, .footbar_contents {
+        width: 500px;
+    }
+
+    .logo {
+        width: 90px;
+    }
+
+    #introanimation > svg {
+        margin-left: -170px !important;
+    }
+
+    #neuralaction_player {
+        height: 281px;
+    }
+}
+
+
+
+@media screen and (max-width: 550px) {
+
+    .title {
+        font-size: 52px;
+    }
+
+    .subtitle {
+        font-size: 30px;
+    }
+    .page_contents, .nav_contents, .footbar_contents {
+        width: 90%;
+    }
+
+    .logo {
+        width: 90px;
+    }
+
+    .nav_menu > a {
+        margin-right: 12.5px;
+        font-size: 12px;
+    }
+
+    #introanimation > svg {
+        margin-left: -100px !important;
+    }
+
+    #neuralaction_player {
+        height: 200px;
+    }
+
+    #introanimation > svg {
+        width: 600px !important;
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+
+    .logo {
+        width: 70px;
+    }
+
+    .nav_menu > a {
+        margin-right: 10px;
+        font-size: 10px;
+    }
+
+    #introanimation > svg {
+        width: 500px !important;
+    }
+}
+
+
+

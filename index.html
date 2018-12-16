@@ -26,13 +26,14 @@
             <div class="nav_contents">
                 <div class="logo"></div>
                 <div class="nav_menu">
-                    <a href="#introduce">Introduce</a>
-                    <a href="#features">Features</a>
-                    <a href="#download">Download</a>
+                    <a onclick="document.querySelector('#introduce').scrollIntoView({ behavior: 'smooth' });">Introduce</a>
+                    <a onclick="document.querySelector('#demo').scrollIntoView({ behavior: 'smooth' });">Demo</a>
+                    <a onclick="document.querySelector('#features').scrollIntoView({ behavior: 'smooth' });">Features</a>
+                    <a onclick="document.querySelector('#download').scrollIntoView({ behavior: 'smooth' });">Download</a>
             </div>
             </div>
         </div>
-        <div class="page introduce">
+        <div id="introduce" class="page introduce">
             <div class="page_contents">
                 <div class="leftside">
                     <div class="title">Neural Action</div>
@@ -53,7 +54,7 @@
                 </div>
             </div>
         </div>
-        <div class="page Demo">
+        <div id="demo" class="page Demo">
             <div class="page_contents">
                     <div class="title">Demo</div>
                     <br>
@@ -62,7 +63,7 @@
                     <div style="width: 100%;" id="neuralaction_player"></div>
             </div>
         </div>
-        <div class="page Features">
+        <div id="features" class="page Features">
             <div class="gazetracking_contents">
                 <div class="page_contents">
                         <div style="text-align: center;" class="title">Features</div>
@@ -96,7 +97,7 @@
             </div>
         </div>
         
-        <div class="page Download">
+        <div id="download" class="page Download">
             <div class="page_contents">
                 <div class="title">Download</div>
                 <br>
@@ -186,6 +187,12 @@
         });
         </script>
             <script>
+
+                function scroll(where) {
+                    document.querySelector(where).scrollIntoView({ 
+                        behavior: 'smooth' 
+                    });
+                }
                 // 2. This code loads the IFrame Player API code asynchronously.
                 var tag = document.createElement('script');
           
